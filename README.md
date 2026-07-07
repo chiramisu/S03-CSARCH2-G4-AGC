@@ -2,12 +2,18 @@
 
 ## July 6, 2026
 ### Changes:
-* Added homepage with hyperlinks to interactive elemets: Then vs Now, Timeline, Workshop
+* Added homepage under src/pages with hyperlinks to interactive elemets: Then vs Now, Timeline, Workshop
 
 ## July 7, 2026
 ### Changes:
 * Debated whether to keep the interactive elements in the homepage or link them to a different page
-* Added interactive timeline and interactive workshop (Still a WIP)
+* Added interactive timeline, interactive workshop, Then vs Now, and minigame (Still a WIP)
+* THEN VS NOW: Added .jsx .mdx .css files 
+* TIMELINE: Added .jsx .mdx .css files for the timeline and also added some images
+* MINIGAME: Added AGCminigame.jsx under components and some images in assets
+* Added .astro for tooltip function in components
+* Modified main page to use tooltips
+* Tooltips added to mainpage detailing some parts in additional info for AGC
 * Interactive workshop is integrated into the homepage instead of having its own hyperlink
 * Cleaned up introduction layout
 
