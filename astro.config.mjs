@@ -4,10 +4,12 @@ import react from '@astrojs/react';
 import icon from 'astro-icon';
 
 export default defineConfig({
-  integrations: [mdx(), react(), icon()],
   site: 'https://chiramisu.github.io',
   base: '/S03-CSARCH2-G4-AGC/',
   trailingSlash: 'always',
-  integrations: [mdx()],
+  integrations: [
+    mdx(), 
+    react(), 
+    icon()
+  ],
 });
-
