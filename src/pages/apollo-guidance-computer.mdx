@@ -9,6 +9,7 @@ import '../styles/agc_homepage.css';
 import apollo11_nasa from '../assets/apollo11_nasa.webp';
 import dsky_agc from '../assets/dsky_agc.jpg';
 import apollo17_rover from '../assets/apollo17_rover.webp';
+import TermTooltip from '../components/TermTooltip.astro';
 
 {/* HOMEPAGE */}
 
@@ -47,17 +48,17 @@ import apollo17_rover from '../assets/apollo17_rover.webp';
         <p class="caption">Apollo Guidance Computer. <a href="https://apollojournals.org/afj/compessay.html">Source: Apollo Flight Journal</a></p>
     </div>
 
-    Developed by the MIT Instrumentation Laboratory, the Apollo Guidance Computer was the first computer built with integrated circuits and used core memory as well as 
-    read-only magnetic rope memory (1968 | Timeline of Computer History | Computer History Museum, n.d.). Compared to older computers, which took up the space of a whole room, 
+    Developed by the MIT Instrumentation Laboratory, the Apollo Guidance Computer was the first computer built with <TermTooltip term="integrated circuits" info="Multiple transistors and other components combined onto a single small chip. This is what let the AGC be small and light enough for a spacecraft, instead of filling a whole room like earlier computers." /> and used <TermTooltip term="core memory" info="A type of memory made from tiny magnetized rings called cores. The AGC used it as erasable memory for data that changed during flight, an early version of what RAM does today." /> as well as 
+    read-only <TermTooltip term="magnetic rope memory" info="A read-only memory woven by hand: a wire threaded through or around a tiny magnetic core encoded each bit. Because it was physically woven, the software inside could not be changed once the rope was built." /> (1968 | Timeline of Computer History | Computer History Museum, n.d.). Compared to older computers, which took up the space of a whole room, 
     it was compact and could fit inside a rocket ship. NASA also wanted the astronauts to be able to compute in real-time while in the spacecraft, instead of relying on on-ground, 
     analog computers (communication and computation using signals), which were neither reliable nor fast enough for a mission to the Moon (Atkinson, 2025). 
     
     The AGC also introduced architectural features that were uncommon at the time. It used erasable core memory for changing mission data and magnetic rope memory for permanently 
     storing software. By separating mission data from mission software, the system became more reliable because critical programs could not be modified during the flight. The magnetic 
-    rope memory stored a large amount of software in a small and compact space, which was important due to the rocket’s weight limitations. In addition, the DSKY (Display and Keyboard) 
+    rope memory stored a large amount of software in a small and compact space, which was important due to the rocket’s weight limitations. In addition, the <TermTooltip term="DSKY (Display and Keyboard)" info="The AGC's interface panel: a small numeric keypad and display. Astronauts typed two-digit Verb and Noun codes into it to run programs and check spacecraft data mid-flight." /> 
     allowed astronauts to communicate directly with the computer, making it easier to monitor the spacecraft and perform navigation tasks in real time (Mattioli, 2021). 
     
-    Another important feature of the AGC was its interrupt-driven design and priority scheduling system, which allowed the computer to handle multiple tasks at once and prioritize critical 
+    Another important feature of the AGC was its interrupt-driven design and <TermTooltip term="priority scheduling" info="A way of letting urgent tasks jump the queue instead of waiting their turn. This is exactly what saved the Apollo 11 landing: when the computer got overloaded and threw 1202 alarms, it kept running critical guidance tasks and dropped the less important ones." /> system, which allowed the computer to handle multiple tasks at once and prioritize critical 
     navigation and guidance calculations over less important processes. This enabled the AGC to continue operating even when it became overloaded (Sotomayor, 2016).
 
     The AGC did not just solve NASA's problems related to the Moon mission. It also addressed limitations of earlier computers, as it was significantly smaller than the vacuum tube- and 
