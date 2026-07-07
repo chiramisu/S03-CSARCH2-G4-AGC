@@ -1,3 +1,18 @@
+# INCREMENTAL README
+
+## July 6, 2026
+# Changes:
+* Added homepage with hyperlinks to interactive elemets: Then vs Now, Timeline, Workshop
+
+## July 7, 2026
+# Changes:
+* Debated whether to keep the interactive elements in the homepage or link them to a different page
+* Added interactive timeline and interactive workshop (Still a WIP)
+* Interactive workshop is integrated into the homepage instead of having its own hyperlink
+* Cleaned up introduction layout
+
+---
+
 # Inside the Apollo Guidance Computer: The Technology That Took Us to the Moon
 
 ## Project Information
