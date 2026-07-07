@@ -14,7 +14,6 @@ export default function AGCMinigame() {
     rope: false
   });
 
-  // Reset the minigame state entirely
   const handleReset = () => {
     const confirmReset = window.confirm(
       "Are you sure you want to reset? Your minigame progress will be completely lost."
@@ -28,7 +27,6 @@ export default function AGCMinigame() {
     }
   };
 
-  // Evaluate selected answers
   const handleSelection = (stepId, correct, text) => {
     setIsCorrect(correct);
     setExplanation(text);
@@ -42,7 +40,6 @@ export default function AGCMinigame() {
     }
   };
 
-  // Workflow engine shifting steps or managing retries
   const handleWorkflowShift = () => {
     setShowEvaluation(false);
 
@@ -60,7 +57,6 @@ export default function AGCMinigame() {
 
   return (
     <>
-      {/* Retain beautiful console style-rules encapsulated natively in the component */}
       <style>{`
         :root {
           --bg-deep-navy: #0B132B;   
@@ -294,7 +290,6 @@ export default function AGCMinigame() {
         <div class="main-canvas">
           <div class="game-grid">
             
-            {/* Left Column: Interactive Blueprint Chassis Layout */}
             <div class="blueprint-card">
               <div class="blueprint-title">// ARCHITECTURAL ASSEMBLY AREA</div>
               <div class="hardware-chassis">
@@ -307,7 +302,6 @@ export default function AGCMinigame() {
               </div>
             </div>
 
-            {/* Right Column: Game Interactive Screen Viewport */}
             <div class="interactive-viewport">
               <button class="exit-btn" onClick={handleReset}>✕ Reset Game</button>
 
