@@ -1,0 +1,97 @@
+.innovations {
+  font-family: 'Arial Bold', monospace;
+}
+
+.innovation-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.innovation-nav button {
+  flex: 1;
+  min-width: 120px;
+  background: #5a5a5a;
+  color: #fff;
+  border: none;
+  padding: 12px 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.innovation-nav button.active {
+  background: #2b2b2b;
+}
+
+.innovation-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.innovation-box {
+  flex: 1;
+  min-width: 280px;
+  background: #e4e4e4;
+  border: 1px solid #2b2b2b;
+  padding: 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.innovation-box h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.innovation-img-placeholder {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #999;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.innovation-box p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.innovation-footer {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.innovation-footer a {
+  display: inline-block;
+  background: #d8d8d8;
+  border: 1px solid #999;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.references {
+  overflow: hidden; 
+  padding-top: 35px;
+}
+
+references-box {
+  float: left;
+  width: 240px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  top: 2rem;
+}
