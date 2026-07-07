@@ -11,6 +11,8 @@ import dsky_agc from '../assets/dsky_agc.jpg';
 import apollo17_rover from '../assets/apollo17_rover.webp';
 import TermTooltip from '../components/TermTooltip.astro';
 
+import AGCMinigame from '../components/AGCMinigame.jsx';
+
 {/* HOMEPAGE */}
 
 # The Apollo Guidance Computer
@@ -88,13 +90,17 @@ import TermTooltip from '../components/TermTooltip.astro';
     <span class="agc-card__button">View Timeline</span>
   </a>
 
-  <a href="/minigame" class="agc-card">
-    <h3 class="agc-card__title">Build the AGC</h3>
-    <p class="agc-card__desc">Play as an engineer and assemble the AGC by solving real design challenges!</p>
-    <span class="agc-card__button">Play to Build the AGC!</span>
-  </a>
+  </div>
 
-</div>
+## Interactive Workshop: Build the AGC
+
+<p>
+Put yourself in the shoes of an MIT Instrumentation Lab engineer. Navigate through structural challenges, manage constraints, and deploy custom hardware architectures directly into 
+the Apollo chassis frame below. \
+=STILL WIP, WILL EVENTUALLY ADD MORE QUESTIONS=
+</p>
+
+<AGCMinigame client:load />
 
 ## References
 
