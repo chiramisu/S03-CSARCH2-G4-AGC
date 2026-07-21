@@ -26,6 +26,10 @@
 ### Disclosure on AI Usage:
 * Used ChatGPT to help with the development of Then vs Now creative programming logic for star burst and compare slider, primarily used to provide explanations, conceptual guidance, pseudocode, and suggestions regarding possible approaches to implementing effects. Prompt used stated below: 
   * Explain in detail how confetti button click effect works but with stars instead, as well as before-and-after comparison slider with blurred background effect. Present the explanation suitable for react in pseudocode and describe the purpose of each major step, and function.
+* Used ChatGPT to assist in the implementation of the React-based interactive timeline to explain React hooks, state management for carousel navigation, and keyboard accessibility. It is also used to verify the historical accuracy of timeline events before they were included in the exhibit. Prompts used are stated below:
+  * How can I implement previous and next navigation for a React carousel using usestate?
+  * How do I make the left and right arrow keys navigate between timeline cards?
+  * Verify this timeline event if it is historically accurate.
 * Used Claude for assistance with grammar, sentence structure, and rephrasing of ideas. Prompt used stated below: 
   * Is the following text cohesive/coherent...
   * What is the main idea you get from the text below...
