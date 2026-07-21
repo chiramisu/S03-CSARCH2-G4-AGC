@@ -4,6 +4,7 @@
 ### Changes made:
 * Added more content, references and design elements to Then vs Now
 * Added more questions, references and design elements to the minigame
+* Added more major events, references, keyboard navigation and design elements to the timeline
 
 ### Things learned, Challenges, Creative Development:
 #### Then vs Now AGC Interactive 
@@ -14,6 +15,12 @@
 #### AGC Minigame
 * The AGC is a major invention in our history and learning more about it made me realize how hard it was too solve these problems involving space travel especially considering the technological constraints back then. A lot of people came together and various components, technology, and innovations were made to make this project a success.
 * For the minigame specifically, I think that the main challenges were creativity and design. Those aspects aren’t really my strong suite. Ideally I wanted the assembly area to have a better design and looked like an actually technological component that you would put modules in but I eventually just settled for a simple design. Additionally, spacing was also a big problem at the start forcing me to make many boxes that could hold text and images.
+
+#### Timeline
+* Originally the timeline looped infinitely and did not start at the first event. I changed the  timeline to follow a linear progression and navigation so it has a clear beginning (1961) and ending (1972) with the Moon acting as the final destination. It ended up matching the theme much better.
+* I also added keyboard navigation because I realized users naturally try using the arrow keys when looking at carousels. It made it feel much more accessible.
+* Designing the timeline itself took more experimentation than I expected. I spent a while adjusting the spacing between the active, previous, and next cards so they were easy to understand. Small changes in scaling and positioning makes big difference.
+* One challenge throughout development was balancing historical accuracy with readability. Many sources explained the AGC using highly technical language, so I spent a lot of time simplifying concepts while making sure the explanations were still accurate and referenced.
 
 ## July 6, 2026
 ### Changes:
