@@ -8,10 +8,11 @@
 
 ### Things learned, Challenges, Creative Development:
 #### Then vs Now AGC Interactive 
-* Based on feedback, to make page less static I added three things: fade transition whenver viewing through innovations, a image slider where you can compare the image of the innovation from before and now, and a small star bursting effect whenever you click the innovation buttons (idea from an instagram reel of a confetti effect).
+* Based on feedback, to make page less static I added three things: fade transition whenver viewing through innovations, an image slider where you can compare the image of the innovation from before and now, and a small star bursting effect whenever you click the innovation buttons (idea from an instagram reel of a confetti effect).
 * Following our proposal, I changed the black and white theme to be more deepspace-centered (blueish, beige, gold), as well as changing the background image to suit the theme by overriding the global.css using !important so I could change the design without touching the global file.
 * Whenever the window size changes, I couldn't see the whole image properly. So I had to fit the entire image and add blurred effect background instead.
 * In the url() portion for the space background, it originally didn't work despite the code being completely fine. Eventually it was fixed by adding "" because the way the file is named in my local device had spaces.
+
 #### AGC Minigame
 * The AGC is a major invention in our history and learning more about it made me realize how hard it was too solve these problems involving space travel especially considering the technological constraints back then. A lot of people came together and various components, technology, and innovations were made to make this project a success.
 * For the minigame specifically, I think that the main challenges were creativity and design. Those aspects aren’t really my strong suite. Ideally I wanted the assembly area to have a better design and looked like an actually technological component that you would put modules in but I eventually just settled for a simple design. Additionally, spacing was also a big problem at the start forcing me to make many boxes that could hold text and images.
@@ -21,6 +22,14 @@
 * I also added keyboard navigation because I realized users naturally try using the arrow keys when looking at carousels. It made it feel much more accessible.
 * Designing the timeline itself took more experimentation than I expected. I spent a while adjusting the spacing between the active, previous, and next cards so they were easy to understand. Small changes in scaling and positioning makes big difference.
 * One challenge throughout development was balancing historical accuracy with readability. Many sources explained the AGC using highly technical language, so I spent a lot of time simplifying concepts while making sure the explanations were still accurate and referenced.
+
+### Disclosure on AI Usage:
+* Used ChatGPT to help with the development of Then vs Now creative programming logic for star burst and compare slider, primarily used to provide explanations, conceptual guidance, pseudocode, and suggestions regarding possible approaches to implementing effects. Prompt used stated below: 
+  * Explain in detail how confetti button click effect works but with stars instead, as well as before-and-after comparison slider with blurred background effect. Present the explanation suitable for react in pseudocode and describe the purpose of each major step, and function.
+* Used Claude for assistance with grammar, sentence structure, and rephrasing of ideas. Prompt used stated below: 
+  * Is the following text cohesive/coherent...
+  * What is the main idea you get from the text below...
+  * Synonym for the phrase...
 
 ## July 6, 2026
 ### Changes:
