@@ -7,6 +7,7 @@ import imp from "../assets/imp.jpg";
 import Philco from "../assets/Philco.jpg";
 import apollo11 from "../assets/apollo11.gif";
 import rover from "../assets/rover.jpg";
+import spaceBg from '../assets/innovations-bg.png';
 
 export default function Timeline() {
   const events = [
@@ -58,6 +59,13 @@ export default function Timeline() {
         "Apollo 17, launched in December 1972, became the final lunar landing mission of the Apollo program. The Apollo Guidance Computer once again guided astronauts during lunar landing, surface exploration, and the journey back to Earth. After more than a decade of development and successful missions, the AGC had demonstrated that integrated circuits were reliable enough for the most demanding space missions. Its success helped establish integrated circuits as the foundation of modern computers, smartphones, medical devices, and countless embedded systems used today."
     },
   ];
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--custom-html-bg', `url("${spaceBg.src}")`);
+    return () => {
+      document.documentElement.style.removeProperty('--custom-html-bg');
+    };
+  }, []);
 
   const [current, setCurrent] = useState(0);
 
