@@ -3,6 +3,7 @@
 ## July 21, 2026
 ### Changes made:
 * Added more content, references and design elements to Then vs Now
+* Added more questions, references and design elements to the minigame
 
 ### Things learned, Challenges, Creative Development:
 #### Then vs Now AGC Interactive 
@@ -10,6 +11,9 @@
 * Following our proposal, I changed the black and white theme to be more deepspace-centered (blueish, beige, gold), as well as changing the background image to suit the theme by overriding the global.css using !important so I could change the design without touching the global file.
 * Whenever the window size changes, I couldn't see the whole image properly. So I had to fit the entire image and add blurred effect background instead.
 * In the url() portion for the space background, it originally didn't work despite the code being completely fine. Eventually it was fixed by adding "" because the way the file is named in my local device had spaces.
+#### AGC Minigame
+* The AGC is a major invention in our history and learning more about it made me realize how hard it was too solve these problems involving space travel especially considering the technological constraints back then. A lot of people came together and various components, technology, and innovations were made to make this project a success.
+* For the minigame specifically, I think that the main challenges were creativity and design. Those aspects aren’t really my strong suite. Ideally I wanted the assembly area to have a better design and looked like an actually technological component that you would put modules in but I eventually just settled for a simple design. Additionally, spacing was also a big problem at the start forcing me to make many boxes that could hold text and images.
 
 ## July 6, 2026
 ### Changes:
