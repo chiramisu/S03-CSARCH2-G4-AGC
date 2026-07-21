@@ -1,5 +1,16 @@
 # INCREMENTAL README -- Changelog
 
+## July 21, 2026
+### Changes made:
+* Added more content, references and design elements to Then vs Now
+
+### Things learned, Challenges, Creative Development:
+#### Then vs Now AGC Interactive 
+* Based on feedback, to make page less static I added three things: fade transition whenver viewing through innovations, a image slider where you can compare the image of the innovation from before and now, and a small star bursting effect whenever you click the innovation buttons (idea from an instagram reel of a confetti effect).
+* Following our proposal, I changed the black and white theme to be more deepspace-centered (blueish, beige, gold), as well as changing the background image to suit the theme by overriding the global.css using !important so I could change the design without touching the global file.
+* Whenever the window size changes, I couldn't see the whole image properly. So I had to fit the entire image and add blurred effect background instead.
+* In the url() portion for the space background, it originally didn't work despite the code being completely fine. Eventually it was fixed by adding "" because the way the file is named in my local device had spaces.
+
 ## July 6, 2026
 ### Changes:
 * Added homepage under src/pages with hyperlinks to interactive elemets: Then vs Now, Timeline, Workshop
