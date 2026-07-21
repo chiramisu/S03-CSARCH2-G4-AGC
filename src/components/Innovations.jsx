@@ -264,7 +264,7 @@ function Innovations() {
       
       <footer className="innovation-footer">
 
-        <a href="../apollo-guidance-computer" > Return to Homepage </a>
+        <a href="/S03-CSARCH2-G4-AGC/homepage/agc-homepage/"> Return to Homepage </a>
 
       </footer>
 

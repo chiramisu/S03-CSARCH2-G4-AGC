@@ -1,29 +1,166 @@
+/* AGC Homepage Stylesheet
+ * This file contains custom styles for the Apollo Guidance Computer (AGC) homepage. */
+
+ /* Import Google Fonts for Space Grotesk and IBM Plex Mono */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-/* Apply Space Grotesk to the whole page, (Overriding the template's Noto Sans/Lora) */
-.content,
-.article,
+/* Override and change background/theme to space */
+html {
+  background-image:
+  linear-gradient(rgba(10, 15, 25, 0.6), rgba(10, 15, 25, 0.75)),
+  url("/src/assets/innovations-bg.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Apply Space Grotesk to the whole page, (Overriding the template's Noto Sans/Lora) &
+ * override the default background and text colors for the main content areas */
+.header__titleblock,
 .content__titlemeta,
-.toc {
-    font-family: 'Space Grotesk', sans-serif;
+.toc,
+.article {
+  background: rgba(8, 16, 28, 0.45) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(184, 134, 11, 0.35) !important;
+  color: #f0ead6 !important;
+  box-shadow: 0px 12px 35px rgba(0,0,0, 0.35) !important;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-/* For headers to use the same font but just in bold */
-.article h1,
-.article h2,
-.article h3,
-.article h4,
-.article h5,
-.article h6,
+/* Override the default color of the title and headings to match the AGC theme */
+.header__titleblock strong,
+.toc h2,
 .content__titlemeta h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
+  color: #c69416 !important;
 }
 
-.agc-text {
-    flex: 2;
-    min-width: 250px;
+/* Override the default color of links in the table of contents to match the AGC theme & for readability */
+.toc a {
+    color: #ffffff !important;
+}
+
+.article p {
+    line-height: 1.85;
+    font-size: 1.08rem;
+    margin-bottom: 1.5rem;
+}
+
+.article h1 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color:#c69416
+}
+
+.article h2{
+    color:#c69416;
+    position: relative;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.article h2::after{
+    content: "";
+    display: block;
+    margin-top: .5rem;
+    width: 80px;
+    height: 2px;
+    background:#c69416;
+}
+
+.article a,
+.article a:visited {
+    color: #9bd0ff !important;
+}
+
+.article a:hover {
+    color: #b9e3ff !important;
+}
+
+.article{
+    animation: articleIn .7s ease;
+}
+
+@keyframes articleIn{
+    from{
+    opacity: 0;
+    transform: translateY(35px);
+    }
+
+    to{
+    opacity: 1;
+    transform: none;
+    }
+}
+
+.mission-log {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .9rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color:#9bd0ff;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    width:0;
+    border-right:2px solid #9bd0ff;
+
+    animation:
+        typingMission 1.5s steps(13,end) forwards,
+        blinkCursor .7s infinite;
+}
+
+@keyframes typingMission {
+    from {
+        width:0;
+    }
+
+    to {
+        width:20ch;
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color:transparent;
+    }
+}
+
+.intro-panel {
+    background:rgba(8,16,28,.45);
+    border: 1px solid rgba(184,134,11,.35);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    overflow: auto;
+}
+
+.info-block {
+    margin: 2.5rem 0;
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(155,208,255,.5);
+}
+
+.info-block h3 {
+    font-family: "IBM Plex Mono";
+    color: #9bd0ff;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.fact-box{
+    background:rgba(155,208,255,.08);
+    border-left: 4px solid #9bd0ff;
+    padding: 1.4rem;
+    margin: 2rem 0;
+    border-radius: 8px;
 }
 
 .header-image {
@@ -38,8 +175,22 @@
 
 .agc-image {
     float: right;
-    width: 350px;
-    margin: 0 0 1rem 1.5rem;
+    width: 280px;
+    margin: 2rem auto;
+    text-align: center;
+    animation:fadeImage .8s ease forwards;
+}
+
+@keyframes fadeImage {
+    from{
+    opacity: 0;
+    transform: translateY(40px);
+    }
+
+    to{
+    opacity: 1;
+    transform: none;
+    }
 }
 
 .agc-image img {
@@ -47,6 +198,13 @@
     display: block;
     border-radius: var(--radius);
     border: 1px solid #b8860b;
+    transition:.3s ease;
+}
+
+.agc-image img:hover{
+    transform: scale(1.02);
+    box-shadow:
+        0 0 35px rgba(198,148,22,.35);
 }
 
 /* Image captions */
@@ -60,31 +218,15 @@
 }
 
 .agc-image .caption a {
-    color: #b8860b;
+    color: #9bd0ff;
 }
 
-/* Stack vertically on small screens */
-@media (max-width: 700px) {
-    .agc-intro-row {
-        flex-direction: column;
-    }
-}
-
-.agc-panel {
-    background-color: #0a1a2f;
-    color: #f2ead9;
-    font-family: 'Space Grotesk', sans-serif;
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    margin: 1rem 0;
-}
-
-.agc-mono {
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-.agc-accent {
-    color: #b8860b;
+a.sources,
+a.sources:visited,
+a.sources:hover,
+a.sources:active {
+    color: #9bd0ff !important;
+    text-decoration-color: #9bd0ff;
 }
 
 .agc-card-grid {
@@ -102,25 +244,30 @@
     border-radius: var(--radius);
     padding: 1.25rem;
     text-decoration: none;
-    color: #f2ead9;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    color: #ffffff;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
 }
 
 .agc-card:hover {
-    transform: translateY(-4px);
+    transform:
+        translateY(-6px);
+
+    border-color:#c69416;
     box-shadow: 5px 5px 0px #b8860b;
 }
 
 .agc-cardTitle {
-    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    color: #b8860b;
+    color: #ffffff;
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 .agc-cardDesc {
-    font-family: 'Space Grotesk', sans-serif;
+    color: #ffffff;
     font-size: 0.9rem;
     opacity: 0.85;
     flex: 1;
@@ -137,4 +284,77 @@
     border-radius: 4px;
     text-align: center;
     align-self: flex-start;
+}
+
+.spec-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:1.2rem;
+    margin:2rem 0;
+}
+
+
+.spec-card {
+    background:rgba(10,26,47,.85);
+    border:1px solid #b8860b;
+    border-radius:var(--radius);
+
+    padding:1.3rem;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.3s ease;
+}
+
+
+.spec-card::before {
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:#9bd0ff;
+}
+
+
+.spec-card:hover {
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 10px 30px rgba(198,148,22,.25);
+}
+
+
+.spec-label {
+    font-family:"IBM Plex Mono", monospace;
+
+    font-size:.75rem;
+    letter-spacing:.15em;
+
+    color:#9bd0ff;
+}
+
+
+.spec-card h3 {
+    color:#c69416;
+    font-size:1.8rem;
+
+    margin:.8rem 0 .4rem;
+}
+
+
+.spec-card p {
+    font-size:.9rem;
+    opacity:.85;
+}
+/* Stack vertically on small screens */
+@media (max-width: 700px) {
+    .agc-intro-row {
+        flex-direction: column;
+    }
 }
