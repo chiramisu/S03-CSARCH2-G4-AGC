@@ -213,7 +213,7 @@ export default function AGCMinigame() {
           background-color: #F8F9FA;
           border: 2px dashed rgba(107, 142, 167, 0.4);
           border-radius: 6px;
-          margin-bottom: 0.5rem; /* Reduced to sit closer to the caption */
+          margin-bottom: 0.5rem; 
           display: flex;
           align-items: center;
           justify-content: center;
@@ -233,14 +233,13 @@ export default function AGCMinigame() {
           object-fit: contain; 
         }
 
-        /* NEW CSS FOR CAPTION */
         .image-source-caption {
           font-family: var(--font-body);
           font-size: 0.85rem;
           color: var(--accent-blue);
           font-style: italic;
           text-align: center;
-          margin-bottom: 1.75rem; /* Retains original spacing before options */
+          margin-bottom: 1.75rem; 
         }
 
         .image-source-link {
@@ -308,6 +307,33 @@ export default function AGCMinigame() {
         }
 
         .navigation-cta-btn:hover { opacity: 0.9; }
+        
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          20% { transform: translateX(-8px); }
+          40% { transform: translateX(8px); }
+          60% { transform: translateX(-8px); }
+          80% { transform: translateX(8px); }
+        }
+
+        @keyframes popIn {
+          0% { 
+            transform: scale(0.95); 
+            opacity: 0; 
+          }
+          100% { 
+            transform: scale(1); 
+            opacity: 1; 
+          }
+        }
+
+        .animate-failure {
+          animation: shake 0.4s ease-in-out;
+        }
+
+        .animate-success {
+          animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
       `}</style>
 
         <div className="main-canvas">
@@ -443,11 +469,11 @@ export default function AGCMinigame() {
               )}
 
               {showEvaluation && (
-                <div className="feedback-block">
+                <div className={`feedback-block ${isCorrect ? 'animate-success' : 'animate-failure'}`}>
                   <div className={`feedback-banner-title ${isCorrect ? 'success' : 'failure'}`}>
                     {isCorrect ? '✓ Component Accepted & Integrated' : '⚠ Assembly Error: Design Rejected'}
                   </div>
-                  
+    
                   <div className="image-placeholder-frame">
                     <img src={ansminigame.src} alt="Correct Answer" />
                   </div>
@@ -462,10 +488,10 @@ export default function AGCMinigame() {
                   </button>
                 </div>
               )}
-
             </div>
           </div>
         </div>
     </>
   );
 }
+
