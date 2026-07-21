@@ -5,10 +5,23 @@
 * Added more content, references and design elements to Then vs Now
 * Added more questions, references and design elements to the minigame
 * Added more major events, references, keyboard navigation and design elements to the timeline
+* Background image was changed to match innovation page, though the background color is different
+* Tooltip color changed for readability
+* Added a landing page (landing.css, landing.astro)
+* Made the landing page connected to the main museum instead of the homepage (named apollo-guidance-computer.mdx)
+* Moved homepage into a folder inside pages, and edited other pages’ hyperlink back to homepage
+* Fixed homepage’s layout
+* Made the key specs into cards
 
 ### Things learned, Challenges, Creative Development:
+#### Homepage
+* The original homepage was static, and it felt like you were merely reading through a Wikipedia page (a friend told me that it looked like a Transformers Wiki page specifically), so animations to text and images were added.
+* Originally, the users would be redirected to the homepage, and it felt dull and overwhelming that you're immediately greeted by information, so we added a landing page which contained a video of Apollo 11 as the background.
+* The original key specifications section was a block of text, so it was changed into cards to make it more readable. The original color palette of the text was also painful to read.
+* The original homepage was filled with paragraphs and paragraphs of text, so it was divided into different sections for improved readability.
+
 #### Then vs Now AGC Interactive 
-* Based on feedback, to make page less static I added three things: fade transition whenver viewing through innovations, an image slider where you can compare the image of the innovation from before and now, and a small star bursting effect whenever you click the innovation buttons (idea from an instagram reel of a confetti effect).
+* Based on feedback, to make page less static I added three things: fade transition whenever viewing through innovations, an image slider where you can compare the image of the innovation from before and now, and a small star bursting effect whenever you click the innovation buttons (idea from an instagram reel of a confetti effect).
 * Following our proposal, I changed the black and white theme to be more deepspace-centered (blueish, beige, gold), as well as changing the background image to suit the theme by overriding the global.css using !important so I could change the design without touching the global file.
 * Whenever the window size changes, I couldn't see the whole image properly. So I had to fit the entire image and add blurred effect background instead.
 * In the url() portion for the space background, it originally didn't work despite the code being completely fine. Eventually it was fixed by adding "" because the way the file is named in my local device had spaces.
